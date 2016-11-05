@@ -42,5 +42,3 @@ error_image_directory_not_writeable = Error: Target directory is not writeable: 
 error_image_does_not_exist = Error: Image does not exist.
 error_image_is_not_writeable = Error: Image can not be removed.
 error_unknown_status_flag = Error: Unknown status flag.
-error_graphs_directory_does_not_exist = Error: Graphs directory does not exist. Please create a \'graphs\' directory inside \'images\'.
-error_graphs_directory_not_writeable = Error: Graphs directory is not writeable.
