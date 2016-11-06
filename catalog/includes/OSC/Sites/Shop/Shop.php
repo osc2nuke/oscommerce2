@@ -43,7 +43,7 @@ class Shop extends \OSC\OM\SitesAbstract
         }
 
         $OSCOM_Language = new Language();
-        $OSCOM_Language->setUseCache(true);
+//        $OSCOM_Language->setUseCache(true);
         Registry::set('Language', $OSCOM_Language);
 
 // set php_self in the global scope
