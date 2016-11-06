@@ -253,9 +253,13 @@
         $email_text = sprintf(OSCOM::getDef('email_greet_none'), $firstname);
       }
 
-      $email_text .= OSCOM::getDef('email_welcome') . OSCOM::getDef('email_text') . OSCOM::getDef('email_contact') . OSCOM::getDef('email_warning');
+      $email_text .= "\n\n" .
+                     OSCOM::getDef('email_welcome', ['store_name' => STORE_NAME]) . "\n\n" .
+                     OSCOM::getDef('email_text') . "\n\n" .
+                     OSCOM::getDef('email_contact', ['store_email_address' => STORE_OWNER_EMAIL_ADDRESS]) . "\n\n" .
+                     OSCOM::getDef('email_warning', ['store_email_address' => STORE_OWNER_EMAIL_ADDRESS]) . "\n";
 
-      $customerEmail = new Mail($email_address, $name, STORE_OWNER_EMAIL_ADDRESS, STORE_OWNER, OSCOM::getDef('email_subject'));
+      $customerEmail = new Mail($email_address, $name, STORE_OWNER_EMAIL_ADDRESS, STORE_OWNER, OSCOM::getDef('email_subject', ['store_name' => STORE_NAME]));
       $customerEmail->setBody($email_text);
       $customerEmail->send();
 
