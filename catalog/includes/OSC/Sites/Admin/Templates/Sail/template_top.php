@@ -21,6 +21,7 @@ use OSC\OM\OSCOM;
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title><?= OSCOM::getDef('title', ['store_name' => STORE_NAME]); ?></title>
 <base href="<?= OSCOM::getConfig('http_server', 'Admin') . OSCOM::getConfig('http_path', 'Admin'); ?>" />
+<meta name="generator" content="osCommerce Online Merchant" />
 <link rel="stylesheet" type="text/css" href="<?= OSCOM::link('Shop/ext/jquery/ui/redmond/jquery-ui-1.11.4.min.css', '', false); ?>">
 <script type="text/javascript" src="<?= OSCOM::link('Shop/ext/jquery/jquery-2.2.3.min.js', '', false); ?>"></script>
 <script type="text/javascript" src="<?= OSCOM::link('Shop/ext/jquery/ui/jquery-ui-1.11.4.min.js', '', false); ?>"></script>

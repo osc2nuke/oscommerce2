@@ -30,6 +30,8 @@
       $this->lang = Registry::get('Language');
 
       $this->_title = OSCOM::getDef('title', ['store_name' => STORE_NAME]);
+
+      $this->addBlock('<meta name="generator" content="osCommerce Online Merchant" />', 'header_tags');
     }
 
     function setGridContainerWidth($width) {
