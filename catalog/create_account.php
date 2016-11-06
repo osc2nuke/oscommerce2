@@ -74,13 +74,13 @@
     if (strlen($firstname) < ENTRY_FIRST_NAME_MIN_LENGTH) {
       $error = true;
 
-      $messageStack->add('create_account', OSCOM::getDef('entry_first_name_error'));
+      $messageStack->add('create_account', OSCOM::getDef('entry_first_name_error', ['min_length' => ENTRY_FIRST_NAME_MIN_LENGTH]));
     }
 
     if (strlen($lastname) < ENTRY_LAST_NAME_MIN_LENGTH) {
       $error = true;
 
-      $messageStack->add('create_account', OSCOM::getDef('entry_last_name_error'));
+      $messageStack->add('create_account', OSCOM::getDef('entry_last_name_error', ['min_length' => ENTRY_LAST_NAME_MIN_LENGTH]));
     }
 
     if (ACCOUNT_DOB == 'true') {
@@ -95,7 +95,7 @@
 
     if (strlen($email_address) < ENTRY_EMAIL_ADDRESS_MIN_LENGTH) {
       $error = true;
-      $messageStack->add('create_account', OSCOM::getDef('entry_email_address_error'));
+      $messageStack->add('create_account', OSCOM::getDef('entry_email_address_error', ['min_length' => ENTRY_EMAIL_ADDRESS_MIN_LENGTH]));
     } elseif (Is::email($email_address) == false) {
       $error = true;
 
@@ -115,19 +115,19 @@
     if (strlen($street_address) < ENTRY_STREET_ADDRESS_MIN_LENGTH) {
       $error = true;
 
-      $messageStack->add('create_account', OSCOM::getDef('entry_street_address_error'));
+      $messageStack->add('create_account', OSCOM::getDef('entry_street_address_error', ['min_length' => ENTRY_STREET_ADDRESS_MIN_LENGTH]));
     }
 
     if (strlen($postcode) < ENTRY_POSTCODE_MIN_LENGTH) {
       $error = true;
 
-      $messageStack->add('create_account', OSCOM::getDef('entry_post_code_error'));
+      $messageStack->add('create_account', OSCOM::getDef('entry_post_code_error', ['min_length' => ENTRY_POSTCODE_MIN_LENGTH]));
     }
 
     if (strlen($city) < ENTRY_CITY_MIN_LENGTH) {
       $error = true;
 
-      $messageStack->add('create_account', OSCOM::getDef('entry_city_error'));
+      $messageStack->add('create_account', OSCOM::getDef('entry_city_error', ['min_length' => ENTRY_CITY_MIN_LENGTH]));
     }
 
     if (is_numeric($country) == false) {
@@ -163,7 +163,7 @@
         if (strlen($state) < ENTRY_STATE_MIN_LENGTH) {
           $error = true;
 
-          $messageStack->add('create_account', OSCOM::getDef('entry_state_error'));
+          $messageStack->add('create_account', OSCOM::getDef('entry_state_error', ['min_length' => ENTRY_STATE_MIN_LENGTH]));
         }
       }
     }
@@ -171,14 +171,14 @@
     if (strlen($telephone) < ENTRY_TELEPHONE_MIN_LENGTH) {
       $error = true;
 
-      $messageStack->add('create_account', OSCOM::getDef('entry_telephone_number_error'));
+      $messageStack->add('create_account', OSCOM::getDef('entry_telephone_number_error', ['min_length' => ENTRY_TELEPHONE_MIN_LENGTH]));
     }
 
 
     if (strlen($password) < ENTRY_PASSWORD_MIN_LENGTH) {
       $error = true;
 
-      $messageStack->add('create_account', OSCOM::getDef('entry_password_error'));
+      $messageStack->add('create_account', OSCOM::getDef('entry_password_error', ['min_length' => ENTRY_PASSWORD_MIN_LENGTH]));
     } elseif ($password != $confirmation) {
       $error = true;
 
