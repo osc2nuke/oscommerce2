@@ -1,5 +1,5 @@
 navbar_title = Tell A Friend
-heading_title = Tell A Friend About \'%s\'
+heading_title = Tell A Friend About '%s'
 form_title_customer_details = Your Details
 form_title_friend_details = Your Friends Details
 form_title_friend_message = Your Message
